@@ -247,6 +247,6 @@ def baselinepp_test(test_loader, encoder_statedict, numepochs, n_way=5, n_suppor
             acclist[i] = paddle.static.accuracy(scores, label.reshape((-1, 1))).numpy()
             i+=1
         acclist = np.array(acclist)
-        print(f'epoch{epoch + 1} : fs_1shot : {acclist.mean():.4f}')
+        print(f'epoch{epoch + 1} : fs_{n_support}shot : {acclist.mean():.4f}')
         test_log.log_something(f'epoch{epoch + 1} : fs_{n_support}shot : {acclist.mean():.4f}')
     return fsmodel
