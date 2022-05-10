@@ -4,7 +4,7 @@
 
 
 # 1.简介
-《Paper Reiteration: A Closer Look at Few-shot Classification》baseline++的核心就是先在基类上训练一个encoder，去除最后的分类器后对encoder进行冻结。
+Paper Reiteration:《A Closer Look at Few-shot Classification》baseline++的核心就是先在基类上训练一个encoder，去除最后的分类器后对encoder进行冻结。
 在新类上将support集的样本送入encoder得到对应的feature，用一个权重矩阵来进行Nway的分类任务与之前的分类器的不同点在于，预训练时用的是乘法，而baseline++在finetune的时候用的是余弦相似度。
 
 # 2.复现精度
