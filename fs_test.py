@@ -5,7 +5,7 @@ import os
 
 n_way, n_support, n_query = 5, 1, 16
 num_workers, numepochs = 0, 3
-encoder_statedict = paddle.load(os.path.join('./save', 'baselinepp_50_model'))
+encoder_statedict = paddle.load(os.path.join('./save', 'baselinepp_55_model'))
 testdataset_1shot = Mini_Imagenet.metaDataSet('test',imagepath = './images')
 testdatasetsamplerr_1shot = Mini_Imagenet.BatchSampler('test', n_way, n_support, n_query, len=600, ep_per_batch=1)
 test_loader_1shot = paddle.io.DataLoader(testdataset_1shot, batch_sampler=testdatasetsamplerr_1shot,
